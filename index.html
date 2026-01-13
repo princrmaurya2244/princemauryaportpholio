@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="protfolio-container">
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about.html">About</a></li>
+            <li><a href="#project.html">Project</a></li>
+            <li><a href="#skills.html">Skills</a></li>
+            <li><a href="#contact.html">Contact</a></li>
+        </ul>
+
+        <div class="left-container">
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+
+            <div class="content">
+            <p class="intro">Hi! I am <span>Prince Maurya</span></p>
+            <h1>Web Developer.</h1>
+            <p class="detail">Hello! I am Prince, a passionate Web Developer. I love to design and build beautiful and functional websites. I have strong knowledge of HTML, CSS, JavaScript and also exploring backend technologies.</p>
+            <div class="btn-container">
+                <button>Hire Me</button>
+                <button onclick="window.location.href='about.html'">View About</button>
+
+            </div>
+            </div>
+
+        </div>
+        <div class="right-container"></div>
+
+        <div class="design">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+    </div>
+
+<!-- <script src="portpholio.js"></script> -->
+    <!-- <img src="image.png" alt="Prince"> -->
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Typed.js animation
+    var typed = new Typed(".intro span", {
+      strings: ["Prince Maurya", "a Web Developer", "a Creative Designer"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+
+    // Smooth scroll navigation
+    document.querySelectorAll('.navlist a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>

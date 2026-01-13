@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favourate music is here</title>
+    <link rel="stylesheet" href="spotifyClone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="https://m.media-amazon.com/images/I/31B2Nyzd8XL.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+            
+    </nav>
+
+    <div class="containre ">
+        <div class="songList">
+            <h1>Best of NCS - No copyright Sounds</h1>
+            <div class="songItemContainer"></div>
+            <div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span><marquee class="headquote">Let me Love You</marquee></span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34  <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+                <div class="songItem">
+                    <img src="https://i.scdn.co/image/ab67706f00000002dcb7b32f8bf2e6a7851245e3" alt="1" class="src">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34 <i class="fa-solid fa-2x fa-circle-play" id="playPause"></i></span></span>
+
+                </div>
+            </div>
+        </div>
+            <div class="songItemContainer"></div>
+            <div class="songList"></div>
+            <div class ="songBanner"></div>
+        </div>        
+
+         <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" max="80">
+        <div class="icon">
+        </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-3x fa-backward" onclick="playPrevious()"></i>
+        <i class="fa-solid fa-3x fa-circle-play" id="mainPlayPauseBtn" onclick="togglePlay()"></i>
+        <i class="fa-solid fa-3x fa-forward" onclick="playNext()"></i>
+    </div> 
+
+    <div class="songInfo">
+        <img src="playing.gif"width="42px" alt=""> Let me love you - Justin Beiber 
+    </div>
+    <script>
+        console.log("Welcome to Spotify");
+
+    let audioElement = new Audio('Ek Number Tuzi Kambar - PagalWorld.mp3');
+    let masterPlay = document.getElementById('mainPlayPauseBtn');
+    let myProgressBar = document.getElementById('myProgressBar');
+
+    let isPlaying = false;
+
+    function togglePlay() {
+        if (!isPlaying) {
+            audioElement.play();
+            masterPlay.classList.remove('fa-circle-play');
+            masterPlay.classList.add('fa-circle-pause');
+            isPlaying = true;
+        } else {
+            audioElement.pause();
+            masterPlay.classList.remove('fa-circle-pause');
+            masterPlay.classList.add('fa-circle-play');
+            isPlaying = false;
+        }
+    }
+
+    // Sync progress bar
+    audioElement.addEventListener('timeupdate', () => {
+        let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+        myProgressBar.value = progress;
+    });
+
+    myProgressBar.addEventListener('change', () => {
+        audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
+    });
+
+    
+    </script>
+    
+    
+</body>
+</html>

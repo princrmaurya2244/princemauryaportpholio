@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" co
+  ntent="width=device-width, initial-scale=1" />
+  <title>Royal Mall | Fashion & Lifestyle</title>
+  <link rel="stylesheet" href="moll.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="https://via.placeholder.com/48" alt="mall logo" class="brand-logo">
+        <div>
+          <h1>Royal Mall</h1>
+          <small>Shop • Dine • Enjoy</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button id="menu-toggle" class="hamburger">☰</button>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#fashion">Fashion</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Welcome to <span>Royal Mall</span></h2>
+        <p>Explore our fashion collection for Ladies & Gents — latest trends, accessories, and lifestyle brands.</p>
+        <a href="#fashion" class="btn">Explore Fashion</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=1200" alt="Fashion mall">
+      </div>
+    </div>
+  </section>
+
+  <!-- FASHION SECTION -->
+  <section id="fashion" class="section container">
+    <h2 class="section-title">Fashion Collection</h2>
+    <p class="section-sub">Choose from our stylish <b>Ladies</b> and <b>Gents</b> collections.</p>
+
+    <div class="filter-buttons">
+      <button class="btn small" onclick="filterItems('all')">All</button>
+      <button class="btn small" onclick="filterItems('ladies')">Ladies</button>
+      <button class="btn small" onclick="filterItems('gents')">Gents</button>
+    </div>
+
+    <div id="fashion-grid" class="grid"></div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="section pale">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid">
+        <div class="event">
+          <h4>Winter Fashion Week</h4>
+          <p>Dec 18–20, 2025 | 5PM Onwards | Royal Mall Atrium</p>
+        </div>
+        <div class="event">
+          <h4>New Year Sale</h4>
+          <p>Up to 60% off on fashion brands — Hurry!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Message or feedback..." required></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Royal Mall | Designed by Prince Maurya</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    menuToggle.addEventListener('click', () => navList.classList.toggle('open'));
+
+    // Fashion items array
+    const items = [
+      { name: "Elegant Dress", price: 1999, img: "https://via.placeholder.com/600x400?text=Ladies+Dress", category: "ladies", desc: "Beautiful evening wear." },
+      { name: "Luxury Handbag", price: 2499, img: "https://via.placeholder.com/600x400?text=Handbag", category: "ladies", desc: "Premium leather handbag." },
+      { name: "Designer Heels", price: 1799, img: "https://via.placeholder.com/600x400?text=Heels", category: "ladies", desc: "Elegant heels for all occasions." },
+      { name: "Casual Shirt", price: 1299, img: "https://via.placeholder.com/600x400?text=Men+Shirt", category: "gents", desc: "Printed cotton shirt." },
+      { name: "Classic Watch", price: 3499, img: "https://via.placeholder.com/600x400?text=Men+Watch", category: "gents", desc: "Stainless steel watch." },
+      { name: "Formal Shoes", price: 2199, img: "https://via.placeholder.com/600x400?text=Men+Shoes", category: "gents", desc: "Leather shoes for office." },
+    ];
+
+    // Auto-generate 1000 items
+    for (let i = 1; i <= 994; i++) {
+      const gender = i % 2 === 0 ? "ladies" : "gents";
+      items.push({
+        name: `${gender === "ladies" ? "Fashion Dress" : "Stylish Shirt"} ${i}`,
+        price: 999 + i,
+        img: `https://via.placeholder.com/600x400?text=Item+${i}`,
+        category: gender,
+        desc: "Trendy fashion item for modern style."
+      });
+    }
+
+    // Render all items
+    const grid = document.getElementById("fashion-grid");
+    items.forEach(item => {
+      const card = document.createElement("article");
+      card.className = "card";
+      card.dataset.category = item.category;
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.name}">
+        <div class="card-body">
+          <h3>${item.name}</h3>
+          <p>${item.desc}</p>
+          <div class="card-row">
+            <span class="price">₹${item.price}</span>
+            <button class="btn small" onclick="orderItem('${item.name}', ${item.price})">Order</button>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Filter function
+    function filterItems(category) {
+      document.querySelectorAll(".card").forEach(card => {
+        card.style.display = (category === "all" || card.dataset.category === category) ? "block" : "none";
+      });
+    }
+
+    // Order function
+    function orderItem(name, price) {
+      alert(`✅ Order placed for ${name}\nPrice: ₹${price}`);
+    }
+
+    // Contact form
+    function sendMessage(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thank you ${name}! Your message has been sent.`);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

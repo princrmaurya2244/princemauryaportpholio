@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Cuisine | Taste Heaven</title>
+  <link rel="stylesheet" href="restrontMenu.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🍴 Taste Heaven</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu-indian.html" class="active">Indian Cuisine</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="menu">
+    <h2>🇮🇳 Indian Cuisine Delights</h2>
+    <p>Experience the authentic flavors of India — from spicy curries to sweet desserts!</p>
+
+    <div class="menu-grid">
+      <!-- North Indian -->
+      <div class="menu-item"><img src="https://www.chefkunalkapur.com/wp-content/uploads/2023/11/DSC07512-1300x731.jpg?v=1699167800" alt=""><h3>Veg Biryani</h3><p>Fragrant rice cooked with fresh vegetables and spices.</p><span>₹329</span><button class="order-btn" onclick="openOrder('Veg Biryani',329)">Order Now</button></div>
+      <div class="menu-item"><img src="https://i0.wp.com/onewholesomemeal.com/wp-content/uploads/2020/08/IMG_6082-3667-2.jpg?fit=864%2C1080&ssl=1" alt=""><h3>Paneer Butter Masala</h3><p>Soft paneer cubes in buttery tomato gravy.</p><span>₹349</span><button class="order-btn" onclick="openOrder('Paneer Butter Masala',349)">Order Now</button></div>
+      <div class="menu-item"><img src="https://img.taste.com.au/cjPf9_uA/taste/2025/03/dal-makhani-indian-butter-lentils-2-208408-1.jpg" alt=""><h3>Dal Makhani</h3><p>Rich lentil curry slow-cooked overnight for deep flavor.</p><span>₹299</span><button class="order-btn" onclick="openOrder('Dal Makhani',299)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbhIBt1bfid1hVKLprQyN3Xd31fHVTyfmKg&s" alt=""><h3>Butter Naan</h3><p>Fluffy bread baked in tandoor with butter glaze.</p><span>₹99</span><button class="order-btn" onclick="openOrder('Butter Naan',99)">Order Now</button></div>
+      <div class="menu-item"><img src="https://static.toiimg.com/thumb/53314156.cms?imgsize=1762111&width=800&height=800" alt=""><h3>Chole Bhature</h3><p>Spicy chickpea curry with fried bhature bread.</p><span>₹179</span><button class="order-btn" onclick="openOrder('Chole Bhature',179)">Order Now</button></div>
+
+      <!-- South Indian -->
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5bE-5hpc_7P39QwwKLXorWDOxaIZ3IzHEaiQY2nrwJj09Gng_Zfpfd5nMe3Outd-1xEs&usqp=CAU" alt=""><h3>Masala Dosa</h3><p>Rice-lentil crepe stuffed with spiced potato filling.</p><span>₹159</span><button class="order-btn" onclick="openOrder('Masala Dosa',159)">Order Now</button></div>
+      <div class="menu-item"><img src="https://vaya.in/recipes/wp-content/uploads/2018/02/Idli-and-Sambar-1.jpg" alt=""><h3>Idli Sambar</h3><p>Soft steamed rice cakes served with lentil curry.</p><span>₹139</span><button class="order-btn" onclick="openOrder('Idli Sambar',139)">Order Now</button></div>
+      <div class="menu-item"><img src="https://images.slurrp.com/prod/recipe_images/transcribe/breakfast/Bajra-onion-uttapam.webp" alt=""><h3>Onion Uttapam</h3><p>Thick rice pancake topped with onions and spices.</p><span>₹149</span><button class="order-btn" onclick="openOrder('Onion Uttapam',149)">Order Now</button></div>
+      <div class="menu-item"><img src="https://madhurasrecipe.com/wp-content/uploads/2021/12/poha_vada_featured.jpg" alt=""><h3>Medu Vada</h3><p>Crispy lentil doughnuts served with coconut chutney.</p><span>₹99</span><button class="order-btn" onclick="openOrder('Medu Vada',99)">Order Now</button></div>
+      <div class="menu-item"><img src="https://holycowvegan.net/wp-content/uploads/2020/01/ven-pongal-2.jpg" alt=""><h3>Ven Pongal</h3><p>South Indian comfort food made with rice and moong dal.</p><span>₹129</span><button class="order-btn" onclick="openOrder('Ven Pongal',129)">Order Now</button></div>
+
+      <!-- Street Food -->
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTorqQfvieS0ikzzKGuxNL9kkj52CTGVtA0CA&s" alt=""><h3>Pani Puri</h3><p>Crispy puris filled with tangy spicy water.</p><span>₹69</span><button class="order-btn" onclick="openOrder('Pani Puri',69)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNgHp0qWjCjxqAhzCQESj7BwDcfmf45wW2xA&s" alt=""><h3>Bhel Puri</h3><p>Puffed rice mixed with chutneys and sev.</p><span>₹89</span><button class="order-btn" onclick="openOrder('Bhel Puri',89)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDmGkPbMl9EwqNvX6-kmJffgtRv2KMEEd9_A&s" alt=""><h3>Vada Pav</h3><p>Mumbai’s favorite spicy potato fritter sandwich.</p><span>₹59</span><button class="order-btn" onclick="openOrder('Vada Pav',59)">Order Now</button></div>
+      <div class="menu-item"><img src="https://myfoodstory.com/wp-content/uploads/2021/08/Punjabi-Samosa-4.jpg" alt=""><h3>Punjabi Samosa</h3><p>Flaky pastry filled with spiced potatoes and peas.</p><span>₹79</span><button class="order-btn" onclick="openOrder('Punjabi Samosa',79)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4dtEi56Zo5zAHVzUQPNZM5QNG_3JLddR5w&s" alt=""><h3>Dahi Puri Chaat</h3><p>Sweet and tangy chaat topped with yogurt and chutneys.</p><span>₹99</span><button class="order-btn" onclick="openOrder('Dahi Puri Chaat',99)">Order Now</button></div>
+
+      <!-- Tandoori Specials -->
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR--a-wg8SSwtuACNGsDlvzIdb5yf4awHvkHw&s" alt=""><h3>Chicken Tikka</h3><p>Char-grilled marinated chicken cubes.</p><span>₹299</span><button class="order-btn" onclick="openOrder('Chicken Tikka',299)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlsGwz9XepYm9DBN6MkLT9dYerix4ofF82Lg&s" alt=""><h3>Seekh Kebab</h3><p>Spiced minced meat grilled on skewers.</p><span>₹329</span><button class="order-btn" onclick="openOrder('Seekh Kebab',329)">Order Now</button></div>
+      <div class="menu-item"><img src="https://sinfullyspicy.com/wp-content/uploads/2024/05/1200-by-1200-images-500x375.jpg" alt=""><h3>Tandoori Roti</h3><p>Whole wheat flatbread baked in clay oven.</p><span>₹49</span><button class="order-btn" onclick="openOrder('Tandoori Roti',49)">Order Now</button></div>
+      <div class="menu-item"><img src="https://www.indianveggiedelight.com/wp-content/uploads/2021/08/air-fryer-paneer-tikka-featured.jpg" alt=""><h3>Paneer Tikka</h3><p>Marinated cottage cheese cubes grilled with veggies.</p><span>₹279</span><button class="order-btn" onclick="openOrder('Paneer Tikka',279)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOJijqhL1foHBUjWbjFlujHk27eWnG1sErw&s" alt=""><h3>Malai Tikka</h3><p>Soft, creamy chicken tikka with mild spices.</p><span>₹349</span><button class="order-btn" onclick="openOrder('Malai Tikka',349)">Order Now</button></div>
+
+      <!-- Sweets -->
+      <div class="menu-item"><img src="https://www.cadburydessertscorner.com/hubfs/dc-website-2022/articles/soft-gulab-jamun-recipe-for-raksha-bandhan-from-dough-to-syrup-all-you-need-to-know/soft-gulab-jamun-recipe-for-raksha-bandhan-from-dough-to-syrup-all-you-need-to-know.webp" alt=""><h3>Gulab Jamun</h3><p>Sweet milk balls soaked in sugar syrup.</p><span>₹99</span><button class="order-btn" onclick="openOrder('Gulab Jamun',99)">Order Now</button></div>
+      <div class="menu-item"><img src="https://madhurasrecipe.com/wp-content/uploads/2023/10/Rasgulla-Featured-Image.jpg" alt=""><h3>Rasgulla</h3><p>Soft and spongy cheese dumplings in syrup.</p><span>₹119</span><button class="order-btn" onclick="openOrder('Rasgulla',119)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPcDCKz_kLgZSEs3b95AXT8t-xKTRp31K8w&si" alt=""><h3>Jalebi</h3><p>Golden crispy spirals soaked in saffron syrup.</p><span>₹89</span><button class="order-btn" onclick="openOrder('Jalebi',89)">Order Now</button></div>
+      <div class="menu-item"><img src="https://www.parsidairyfarm.com/cdn/shop/files/KajuKatli.jpg?v=1699528323i" alt=""><h3>Kaju Katli</h3><p>Cashew fudge topped with silver leaf.</p><span>₹159</span><button class="order-btn" onclick="openOrder('Kaju Katli',159)">Order Now</button></div>
+      <div class="menu-item"><img src="https://lynkfoods.com/cdn/shop/articles/Motichoor_Ladoo_blog.jpg?v=1730693140" alt=""><h3>Motichoor Laddu</h3><p>Traditional Indian festive sweet.</p><span>₹99</span><button class="order-btn" onclick="openOrder('Motichoor Laddu',99)">Order Now</button></div>
+
+      <!-- Drinks -->
+      <div class="menu-item"><img src="https://houseofnasheats.com/wp-content/uploads/2023/08/Mango-Lassi-Recipe-15.jpg" alt=""><h3>Mango Lassi</h3><p>Sweet yogurt drink blended with ripe mangoes.</p><span>₹129</span><button class="order-btn" onclick="openOrder('Mango Lassi',129)">Order Now</button></div>
+      <div class="menu-item"><img src="https://carameltintedlife.com/wp-content/uploads/2021/01/Masala-Chai-.jpg" alt=""><h3>Masala Chai</h3><p>Indian spiced tea brewed with milk and ginger.</p><span>₹49</span><button class="order-btn" onclick="openOrder('Masala Chai',49)">Order Now</button></div>
+      <div class="menu-item"><img src="https://www.whiskaffair.com/wp-content/uploads/2021/01/Filer-Coffee-2-3.jpg" alt=""><h3>South Indian Filter Coffee</h3><p>Rich aromatic coffee brewed the traditional way.</p><span>₹69</span><button class="order-btn" onclick="openOrder('South Indian Filter Coffee',69)">Order Now</button></div>
+      <div class="menu-item"><img src="https://palatesdesire.com/wp-content/uploads/2022/03/Thandai-recipe@palates-desire-2.jpg" alt=""><h3>Thandai</h3><p>Cooling milk-based drink with saffron and nuts.</p><span>₹149</span><button class="order-btn" onclick="openOrder('Thandai',149)">Order Now</button></div>
+      <div class="menu-item"><img src="https://juicernet.com//wp-content/uploads/2022/08/sFw1zSLlqpVbvFytZQWdmkniIuBZzXLW1659961246-scaled.jpeg" alt=""><h3>Sugarcane Juice</h3><p>Freshly squeezed sugarcane with lemon and mint.</p><span>₹59</span><button class="order-btn" onclick="openOrder('Sugarcane Juice',59)">Order Now</button></div>
+
+      <!-- More Dishes -->
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwgDjjeDBhjYECMNvwg2Zoq1JeSexFTAsfQ&s" alt=""><h3>Mutter Paneer</h3><p>Paneer cubes with peas in onion-tomato gravy.</p><span>₹299</span><button class="order-btn" onclick="openOrder('Mutter Paneer',299)">Order Now</button></div>
+      <div class="menu-item"><img src="https://www.kingarthurbaking.com/sites/default/files/2025-07/Aloo-Paratha-_2025_Lifestyle_H_2435.jpg" alt=""><h3>Aloo Paratha</h3><p>Stuffed flatbread served with butter and curd.</p><span>₹149</span><button class="order-btn" onclick="openOrder('Aloo Paratha',149)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSgj6mdhgjzvnj2FLTmjtTnt0At46bTKrySQ&s" alt=""><h3>Rajma Chawal</h3><p>Kidney beans curry served with rice.</p><span>₹229</span><button class="order-btn" onclick="openOrder('Rajma Chawal',229)">Order Now</button></div>
+      <div class="menu-item"><img src="https://www.mrishtanna.com/wp-content/uploads/2018/04/poha-indian-breakfast-recipe.jpg" alt=""><h3>Poha</h3><p>Flattened rice sautéed with onions, mustard, and lemon.</p><span>₹79</span><button class="order-btn" onclick="openOrder('Poha',79)">Order Now</button></div>
+      <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgLss255oTBYWS4wQf-LdkQ8xuwIgosnGXrA&s" alt=""><h3>Rice Kheer</h3><p>Traditional Indian dessert made with milk and rice.</p><span>₹129</span><button class="order-btn" onclick="openOrder('Rice Kheer',129)">Order Now</button></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Taste Heaven | Designed by Prince Maurya</p>
+  </footer>
+
+  <!-- Order Popup -->
+  <div id="order-popup" class="order-popup">
+    <div class="order-content">
+      <span class="close-btn" onclick="closeOrder()">&times;</span>
+      <h2 id="item-name">Item Name</h2>
+      <p>Price: ₹<span id="item-price">0</span></p>
+      <label>Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1">
+      <p>Total: ₹<span id="total-price">0</span></p>
+      <button class="confirm-btn" onclick="confirmOrder()">Confirm Order</button>
+    </div>
+  </div>
+
+  <script>
+    let currentItem = '';
+    let currentPrice = 0;
+
+    function openOrder(name, price) {
+      currentItem = name;
+      currentPrice = price;
+      document.getElementById('item-name').textContent = name;
+      document.getElementById('item-price').textContent = price;
+      document.getElementById('total-price').textContent = price;
+      document.getElementById('quantity').value = 1;
+      document.getElementById('order-popup').style.display = 'flex';
+    }
+
+    function closeOrder() {
+      document.getElementById('order-popup').style.display = 'none';
+    }
+
+    document.getElementById('quantity').addEventListener('input', function() {
+      let qty = parseInt(this.value) || 1;
+      document.getElementById('total-price').textContent = qty * currentPrice;
+    });
+
+    function confirmOrder() {
+      let qty = parseInt(document.getElementById('quantity').value) || 1;
+      let total = qty * currentPrice;
+      alert(`✅ Order Confirmed!\n\nItem: ${currentItem}\nQuantity: ${qty}\nTotal: ₹${total}\n\nThank you for ordering from Taste Heaven!`);
+      closeOrder();
+    }
+  </script>
+  <script>
+  function toggleTheme() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+
+  // Save preference in localStorage
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+    document.querySelector(".theme-toggle").textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    document.querySelector(".theme-toggle").textContent = "🌙";
+  }
+}
+
+// Apply saved theme on reload
+window.onload = () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    document.querySelector(".theme-toggle").textContent = "☀️";
+  }
+};
+</script>  
+
+</body>
+</html>

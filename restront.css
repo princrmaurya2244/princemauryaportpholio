@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  color: #ffb703;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+}
+
+.btn {
+  background: #ffb703;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x800/?restaurant,food') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h1 span {
+  color: #ffb703;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+/* About */
+.about {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffb703;
+}
+
+/* Menu */
+.menu {
+  background: #f9f9f9;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.menu h2 {
+  color: #ffb703;
+  margin-bottom: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.menu-item h3 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.menu-item span {
+  color: #ffb703;
+  font-weight: bold;
+}
+
+/* Gallery */
+.gallery {
+  padding: 80px 60px;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.contact h2 {
+  color: #ffb703;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form button {
+  background: #ffb703;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #fff;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

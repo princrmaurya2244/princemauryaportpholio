@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #fffaf2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background-color: #ff914d;
+  padding: 15px 30px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #000;
+}
+
+/* Menu Section */
+.menu {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fffaf2;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d35400;
+}
+
+.menu p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Menu Item */
+.menu-item {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.menu-item h3 {
+  color: #d35400;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.menu-item span {
+  display: block;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Order Button */
+.order-btn {
+  display: inline-block;
+  margin-top: 10px; /* adds space between price and button */
+  margin-right: 5px;
+  background-color: #ff914d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #e86c28;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #ff914d;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 1rem;
+}
+
+/* Order Popup */
+.order-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.order-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.order-content h2 {
+  color: #d35400;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.order-content p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.order-content input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.confirm-btn {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #1e8449;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row for phones */
+  }
+
+  .menu-item img {
+    height: 250px;
+  }
+}
